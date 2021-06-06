@@ -1,0 +1,234 @@
+.basket-page {
+  width: 100%;
+  height: 100vh;
+  padding-top: 25px;
+
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+
+    .basket-area {
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      /**/
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
+      padding: 0 10px;
+
+      .asd-basket-container {
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+
+        li {
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: space-between;
+          padding: 3px 0;
+          align-items: center;
+          padding-top: 10px;
+
+          &:not(:last-child) {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e5e5e5;
+          }
+
+          .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 70%;
+            word-break: break-all;
+
+            .title {
+              color: #f50;
+              font-size: 16px;
+              font-weight: 700;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+              text-decoration: underline;
+            }
+
+            .order-info {
+              text-transform: capitalize;
+              margin-bottom: 0;
+            }
+          }
+          .right {
+            width: 30%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 24px;
+
+            .input-area {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              margin-right: 20px;
+
+              i,
+              span {
+                padding: 0 5px;
+              }
+            }
+
+            i {
+              font-size: 20px;
+              cursor: pointer;
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+      /**/
+      .order-total-area {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        margin-bottom: 50px;
+        span {
+          font-size: 32px;
+          font-weight: 700;
+        }
+      }
+
+      //   table {
+      //     border-collapse: collapse;
+      //     border-spacing: 0;
+      //     border-color: grey;
+      //     width: 100%;
+      //     max-width: 100%;
+      //     margin-bottom: 20px;
+      //     box-shadow: 0 1px 0 #d5d5d5;
+
+      //     thead {
+      //       background-color: #eff0f2;
+      //       border: 1px solid #e8e8e8;
+      //       vertical-align: middle;
+      //     }
+
+      //     tbody {
+      //       vertical-align: middle;
+      //       border: 0;
+      //       border-left: 1px solid #e5e5e5;
+      //       border-right: 1px solid #e5e5e5;
+      //     }
+      //     tfoot {
+      //       border: 1px solid #e5e5e5;
+      //       border-bottom: none;
+
+      //       tr {
+      //         height: 55px;
+
+      //         td {
+      //           padding: 11px 15px;
+      //         }
+      //       }
+
+      //       .tdTotalValues {
+      //         font-weight: 700;
+      //         text-align: right;
+      //         background-color: red;
+      //       }
+
+      //       .tdTotalText {
+      //         text-align: right;
+      //       }
+      //     }
+      //     tr {
+      //       th {
+      //         font-weight: 700;
+      //         line-height: 1.45;
+      //       }
+      //     }
+      //     .tdOrderName {
+      //       width: 74%;
+      //       padding: 12px 0 10px 16px;
+      //       vertical-align: bottom;
+
+      //       .title {
+      //         color: #f50;
+      //         text-transform: capitalize;
+      //         font-weight: 700;
+      //         text-decoration: underline;
+      //         cursor: pointer;
+
+      //         &:hover {
+      //           text-decoration: none;
+      //         }
+      //       }
+      //     }
+
+      //     .tdOrderPrice {
+      //       width: 10%;
+      //       padding: 0 47px 10px 0;
+      //       vertical-align: bottom;
+      //     }
+
+      //     .tdOrderCount {
+      //       width: 3%;
+      //       padding: 0 8px 10px 0;
+      //       text-align: center;
+      //       vertical-align: bottom;
+
+      //       input {
+      //         width: 25px;
+      //         padding: 2px 3px;
+      //         text-align: center;
+      //         border: 1px solid #e5e5e5;
+      //         border-radius: 4px;
+      //         box-shadow: 0 -1px 0 #ccc;
+
+      //         &:focus {
+      //           outline: none;
+      //         }
+      //       }
+      //     }
+
+      //     .tdOrderTotal {
+      //       width: 10%;
+      //       padding: 0 15px 10px 0;
+      //       text-align: right;
+      //       vertical-align: bottom;
+      //     }
+
+      //     .tdOrderActions {
+      //       width: 3%;
+      //       padding: 17px 15px 0 0;
+      //     }
+      //   }
+
+      .bottom {
+        width: 100%;
+
+        display: flex;
+        justify-content: flex-end;
+        .delivery-btn {
+          button {
+            border: none;
+            border-radius: 10px;
+            padding: 10px 15px;
+            background-color: #333;
+            color: #fff;
+
+            &:active {
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

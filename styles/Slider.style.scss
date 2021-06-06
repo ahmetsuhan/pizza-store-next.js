@@ -1,0 +1,134 @@
+.slider {
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c9cbd6;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff5500;
+  }
+  ::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: inset 7px 10px 12px #f0f0f0;
+  }
+
+  &-container {
+    width: 100%;
+    height: auto;
+    &-inner {
+      width: 100%;
+      height: 100%;
+
+      .slider-title {
+        font-weight: 700;
+        font-size: 32px;
+      }
+      .scroll {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        .box {
+          display: flex;
+          border: 1px solid #ccc;
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+          width: 33%;
+          min-width: 330px;
+          max-height: 150px;
+          padding: 10px;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            box-shadow: 0 1rem 2rem 0 #ddd;
+          }
+
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+
+          .left,
+          .right {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .left {
+            width: 40%;
+
+            img {
+              width: 100%;
+              height: 130px;
+              object-position: center;
+              object-fit: cover;
+              transition: box-shadow 0.3s ease-in-out;
+            }
+
+            &:hover {
+              width: 100%;
+
+              img {
+                width: 100%;
+                height: 130px;
+                object-fit: cover;
+              }
+              & + .right {
+                display: none;
+              }
+            }
+          }
+          .right {
+            width: 60%;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 10px;
+
+            .title {
+              font-size: 16px;
+              font-weight: 700;
+              white-space: nowrap;
+              width: 80%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            .price {
+              font-size: 20px;
+              font-weight: bold;
+              color: #f50;
+              margin-bottom: 10px;
+            }
+
+            .icon-container {
+              border: 1px solid #f50;
+              padding: 3px 6px;
+              cursor: pointer;
+
+              &:hover {
+                background-color: #f50;
+                border-color: #333;
+                i {
+                  color: #fff;
+                }
+              }
+              i {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

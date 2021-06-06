@@ -1,0 +1,51 @@
+.basket {
+  width: auto;
+  height: auto;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 999;
+
+  cursor: pointer;
+  display: inline-block;
+
+  &-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 5px;
+
+    i {
+      color: red;
+    }
+    span {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 24px;
+      text-align: center;
+      font-weight: 700;
+      background-color: #333;
+      color: #fff;
+      border-radius: 50%;
+      width: 25px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &:hover {
+    background-color: red;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    i {
+      color: #fff;
+    }
+
+    span {
+      transform: translateX(-25px) translateY(30px);
+    }
+  }
+}
