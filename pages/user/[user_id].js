@@ -1,7 +1,11 @@
 import React from "react";
 import NavLinks from "@/components/NavLink";
+import UserProfileMenu from "@/components/UserProfileMenu";
+import { useToggle } from "@hooks/useToggle";
 
 const UserProfilePage = ({ userId, user }) => {
+  const [showMenu, setShowMenu] = useToggle(false);
+
   if (!user || Object.keys(user).length === 0) {
     return <h1>Loading...</h1>;
   }
@@ -16,6 +20,17 @@ const UserProfilePage = ({ userId, user }) => {
           +
         </div>
         <div className="right">
+          {showMenu ? (
+            <i
+              onClick={() => setShowMenu(false)}
+              className="fas fa-chevron-right "
+            ></i>
+          ) : (
+            <i
+              onClick={() => setShowMenu(true)}
+              className="fas fa-chevron-left "
+            ></i>
+          )}
           <div className="img-container">
             <img
               src={user.picture.thumbnail}
@@ -23,6 +38,10 @@ const UserProfilePage = ({ userId, user }) => {
               width={32}
               height={32}
             />
+          </div>
+
+          <div className="drop-down-area">
+            <UserProfileMenu user={user} show={showMenu} />
           </div>
         </div>
       </div>
@@ -74,4 +93,4 @@ export async function getStaticPaths() {
   };
 }
 
-export default UserProfilePage;
+export default React.memo(UserProfilePage);
