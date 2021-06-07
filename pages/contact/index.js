@@ -4,8 +4,12 @@ import { Formik } from "formik";
 import { sendMessage } from "@utils/contactHelper.js";
 import { formMessages } from "@utils/constants.js";
 
+import { useSelector } from "react-redux";
+
 const ContactPage = () => {
   const [user, setUser] = useState("");
+
+  const { currentUser } = useSelector((state) => state.user);
 
   const handleSubmit = (values, actions) => {
     setUser({
@@ -51,7 +55,11 @@ const ContactPage = () => {
           <h2>Feel free to contact us</h2>
 
           <Formik
-            initialValues={{ name: "", email: "", message: "" }}
+            initialValues={{
+              name: currentUser.name || "",
+              email: currentUser.email || "",
+              message: "",
+            }}
             validate={(values) => handleRules(values)}
             onSubmit={(values, actions) => handleSubmit(values, actions)}
           >
