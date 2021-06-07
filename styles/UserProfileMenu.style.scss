@@ -1,0 +1,57 @@
+.userProfileMenu {
+  width: 100%;
+  height: auto;
+  backface-visibility: hidden;
+  background-color: #fff;
+
+  li {
+    padding: 10px 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+
+    a {
+      color: #000;
+    }
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+
+  &.open {
+    transform: translateX(0);
+    animation-name: movedown;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-iteration-count: 1;
+    display: block;
+  }
+
+  &.close {
+    transform: translateX(500px);
+    animation-name: moveright;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-iteration-count: 1;
+  }
+
+  @keyframes movedown {
+    0% {
+      transform: translateX(500px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes moveright {
+    0% {
+      transform: translateX(0);
+      display: block;
+    }
+
+    100% {
+      transform: translateX(500px);
+    }
+  }
+}

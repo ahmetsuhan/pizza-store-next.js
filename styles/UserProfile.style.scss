@@ -18,10 +18,14 @@
 
   .right {
     margin-right: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
 
     .img-container {
       width: 32px;
       height: 32px;
+      cursor: pointer;
 
       img {
         width: 100%;
@@ -30,6 +34,26 @@
         object-position: center;
         border-radius: 50%;
       }
+    }
+    i {
+      color: #fff;
+      margin-right: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #f50;
+      }
+    }
+
+    .drop-down-area {
+      position: absolute;
+      top: 43px;
+      right: -10px;
+      width: 250px;
+      height: auto;
+      cursor: default;
     }
   }
 
