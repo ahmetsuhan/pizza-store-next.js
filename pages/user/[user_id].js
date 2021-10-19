@@ -48,11 +48,37 @@ const UserProfilePage = ({ userId, user }) => {
 
       <div className="content_wrapper profile">
         <div className="container">
-          <nav>
-            <ul>
-              <NavLinks />
-            </ul>
-          </nav>
+          <div className="container-top">
+            <figure>
+              <img
+                width="100px"
+                height="100px"
+                src={user.picture.large}
+                alt=""
+              />
+            </figure>
+            <h2 className="username">{user.name}</h2>
+            <span>{user.email}</span>
+          </div>
+          <div className="container-content">
+            <div className="order-containers">
+              <div className="order-box">
+                <div className="order-box-container">
+                  <div className="boxtop">
+                    <h2>Last Order</h2>
+                  </div>
+                  <div className="boxcenter">center</div>
+                  <div className="boxbottom">bottom </div>
+                </div>
+              </div>
+              <div className="order-box">
+                <div className="order-box-container">asd</div>
+              </div>
+              <div className="order-box">
+                <div className="order-box-container">asd</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
