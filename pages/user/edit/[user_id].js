@@ -1,11 +1,15 @@
 import React from "react";
-
+import Image from "next/image";
 const UserProfileEditpage = ({ user_id, user }) => {
   console.log(user);
   return (
     <div className="user-edit-profile-page">
       <div className="user-edit-profile-page-container">
-        <div className="top">top </div>
+        <div className="top">
+          <div className="user-img">
+            <Image width={50} height={50} />
+          </div>
+        </div>
         <div className="center">center</div>
         <div className="bottom">bottom</div>
       </div>
